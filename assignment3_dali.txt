@@ -1,0 +1,13 @@
+Any number x can be written as 10^n multiply by a single digit.
+for instance, 43 can be written as (10^1)*4 + (10^0)*3.
+In two digits, they can be written as (10*a+b)(10*a+b) which
+is 100a^2 + 20ab + b^2.  It doesn't matter how much we increase the digits, 
+the last component of the polynomial will always be "something^2".  everything 
+else will be even because they will be multiplied by a multiple of 10.  
+Thus, all we need to do is to figure out what this "something^2" is.  
+Luckily, we can use a recursive approach by keep making the "something^2" 
+into the above expression.  Eventually, it'll come down to single digits.  
+Now, all we have to do is to check for all single digit perfect squares: 
+1*1=1, 2*2=4,3*3=9,4*4=16,5*5=25,6*6=36,7*7=49,8*8=64,9*9=81.  None of their 
+last two digits are both odd.  Thus, the solution does not exist and so the 
+program will run forever.

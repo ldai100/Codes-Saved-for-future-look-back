@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+int b[3][2];
+
+cout << sizeof(b)<< endl;
+//answer is 24 size of the whole array
+cout << sizeof(b+0)<< endl;
+//answer is 8 size of a pointer
+cout << sizeof(*(b+0))<< endl;
+//answer is 8 size of a pointer
+
+//the next line prints 0012FF68
+cout << "The address of b is: " << b << endl;
+//given to be 0012FF68
+cout << "The address of b+1 is: " << b+1 << endl;
+//answer 0012FF70
+cout << "The address of &b is: "<< &b << endl;
+//answer 0012FF68
+cout << "The address of &+1 is: " << &b+1 << endl << endl;
+//answer 0012FF80
+return 0;
+
+}
